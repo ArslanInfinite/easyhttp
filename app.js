@@ -50,3 +50,14 @@ http.put('https://jsonplaceholder.typicode.com/posts/1', data, function(error, p
     }
 })
 
+// deleting DELETE
+
+http.delete('https://jsonplaceholder.typicode.com/posts/1', 
+function(error, response){
+    if(error) {
+        console.log(error)
+    } else {
+        console.log(response)
+    }
+    } 
+)
