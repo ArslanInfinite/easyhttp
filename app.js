@@ -2,7 +2,7 @@ const http = new easyHTTP
 
 // GET Posts
 
-// http.get('https://jsonplaceholder.typicode.com/posts1', 
+// http.get('https://jsonplaceholder.typicode.com/posts', 
 // function(error, response){
 //     if(error) {
 //         console.log(error)
@@ -23,3 +23,19 @@ const http = new easyHTTP
 // //     }
 // // } )
 
+// creating data to send 
+
+const data = {
+    title: 'Custom Post', 
+    body: 'This is a custom post'
+}
+
+// creating POST 
+http.post('https://jsonplaceholder.typicode.com/posts', data, 
+function(error, post) {
+    if(error){
+        console.log(error)
+    } else {
+        console.log(post)
+    }
+})

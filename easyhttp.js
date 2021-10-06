@@ -29,8 +29,6 @@ easyHTTP.prototype.post = function(url, data, callback){
     this.http.onload = function(){
         callback(null, self.http.responseText)
         }
-    this.send(JSON.stringify(data))
+    this.http.send(JSON.stringify(data))
 }
-// making http PUT request 
 
-// making http DELETE request 
