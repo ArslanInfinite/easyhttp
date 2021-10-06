@@ -31,11 +31,22 @@ const data = {
 }
 
 // creating POST 
-http.post('https://jsonplaceholder.typicode.com/posts', data, 
-function(error, post) {
+// http.post('https://jsonplaceholder.typicode.com/posts', data, 
+// function(error, post) {
+//     if(error){
+//         console.log(error)
+//     } else {
+//         console.log(post)
+//     }
+// })
+
+// updating POST - the id will be replaced with the final digit in the URL
+
+http.put('https://jsonplaceholder.typicode.com/posts/1', data, function(error, post){
     if(error){
         console.log(error)
     } else {
         console.log(post)
     }
 })
+
