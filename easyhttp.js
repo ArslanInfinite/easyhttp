@@ -8,11 +8,11 @@ easyHTTP.prototype.get = function(url, callback){
     // self will capture the scope of this 
     let self = this 
     this.http.onload = function(){
-        if(this.http.status === 200) {
+        if(self.http.status === 200) {
             callback(self.http.responseText)
         }        
     }
-    this.http.send
+    this.http.send()
 }
 
 // making http POST request 
